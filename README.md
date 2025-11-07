@@ -30,7 +30,26 @@
 - Add personalized About-Me modal (portrait, texture, signature)  
 - Build base carousel component for home + category pages  
 - Integrate placeholder images and captions  
-- Begin AI-generated visual concepts for mockups  
+- Begin AI-generated visual concepts for mockups
+
+- ---
+
+## ⚙️ Dev Stack & Build Notes
+
+**Frontend:** React JS, HTML, CSS, JavaScript  
+**Hosting:** Vercel (linked to GitHub)  
+**Domain:** greenspaghetti.me (IONOS → DNS → Vercel setup)  
+**Version Control:** GitHub main branch (auto-deploy on push)  
+**Image Source:** Placeholder images from Lorem Picsum  
+**AI Assets:** Concept art generated for homepage + carousel mockups  
+
+**Rebuilds:**  
+1. Initial prototype (Phase 1)  
+2. Rebuild with modals and domain integration (Phase 2)  
+3. Current live build (Phase 3 – visuals + carousel)
+
+---
+
 
 </details>
 
