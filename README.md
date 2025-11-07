@@ -50,6 +50,18 @@
 
 ---
 
+---
+
+## 🎨 Visual Development
+
+AI-generated mockups and concept art coming soon:  
+- Homepage layout concepts  
+- Recipe carousel preview  
+- About-Me portrait and signature tests  
+
+*(These will be added once Phase 3 visuals are finalized.)*
+
+
 
 </details>
 
