@@ -1,0 +1,214 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  position: relative;
+  background: #e2f0d9;
+  color: #2e5c2e;
+  width: 75%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #2e5c2e;
+  cursor: pointer;
+}
+
+.vertical-text {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  letter-spacing: 6px;
+  color: rgba(46, 92, 46, 0.1);
+ text-transform: uppercase;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #a5a694;
+  border-radius: 6px;
+}
+
+.skill-level {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.level-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.level-options label {
+  cursor: pointer;
+}
+
+.level-options input {
+  display: none;
+}
+
+.bubble {
+  border: 2px solid #2e5c2e;
+  border-radius: 50px;
+  padding: 6px 12px;
+  margin: 3px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.level-options input:checked + .bubble {
+  background-color: #2e5c2e;
+  color: #fff;
+}
+
+.subscribe-submit {
+  background: #2e5c2e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Password rules ===== */
+.password-rules {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.password-rules ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+.password-rules li {
+  color: #999;
+  transition: color 0.3s ease;
+}
+.password-rules li.valid {
+  color: #2e5c2e;
+  font-weight: 600;
+}
+
+/* ===== Blurb box ===== */
+.subscribe-blurb {
+  background: #f7f8f2;
+  padding: 10px;
+  margin: 15px 0;
+  max-height: 120px;
+  overflow-y: auto;
+  border-radius: 6px;
+  border: 1px solid #a5a694;
+  font-size: 0.9rem;
+  color: #2e5c2e;
+}
+
+/* ===== Terms checkbox ===== */
+.terms-box {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.terms-box input {
+  margin-right: 5px;
+}
+
+/* ===== Fireworks effect ===== */
+.fireworks {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.burst {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  background: #2e5c2e;
+  border-radius: 50%;
+  animation: firework 1s ease-out infinite;
+}
+.burst:nth-child(2) { animation-delay: 0.1s; }
+.burst:nth-child(3) { animation-delay: 0.2s; }
+.burst:nth-child(4) { animation-delay: 0.3s; }
+.burst:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes firework {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(calc(-50% + (var(--x, 50px))), calc(-50% + (var(--y, -50px)))) scale(0); opacity: 0; }
+}
+
+/* ===== Confetti Animation ===== */
+.confetti {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px; height: 12px;
+  background-color: hsl(var(--hue, 0), 70%, 60%);
+  top: 0;
+  left: calc(50% - 4px);
+  opacity: 0;
+  transform: rotate(0deg);
+  animation: confetti-fall 1.5s linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Randomized colors and positions */
+.confetti-piece:nth-child(5n) { --hue: 10; left: 10%; animation-delay: 0s; }
+.confetti-piece:nth-child(5n+1) { --hue: 45; left: 25%; animation-delay: 0.1s; }
+.confetti-piece:nth-child(5n+2) { --hue: 120; left: 40%; animation-delay: 0.2s; }
+.confetti-piece:nth-child(5n+3) { --hue: 200; left: 60%; animation-delay: 0.3s; }
+.confetti-piece:nth-child(5n+4) { --hue: 300; left: 80%; animation-delay: 0.4s; }
