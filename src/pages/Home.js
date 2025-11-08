@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/pg-style/home.css";
+import placeholderImage from "../assets/homepage-placeholder.jpg";
+
 
 function Home() {
   return (
@@ -10,6 +12,10 @@ function Home() {
           Welcome to Green Spaghetti — where recipes meet creativity. This is
           just the beginning!
         </p>
+        <div className="homepage-image">
+  <img src={placeholderImage} alt="Green Spaghetti preview" />
+</div>
+
       </div>
     </div>
   );
