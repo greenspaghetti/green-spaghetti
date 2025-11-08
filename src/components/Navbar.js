@@ -4,31 +4,19 @@ import "../styles/comp-style/navbar.css";
 
 function Navbar({ onOpenLogin }) {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <header className="navbar">
-        <button className="menu-icon" onClick={toggleMenu}>☰</button>
-
-        <div className="navbar-title">
-          🍝 <span>Green Spaghetti</span>
-        </div>
-
-        <button className="subscribe-btn" onClick={onOpenLogin}>
-          Enter the Kitchen
-        </button>
+        <button className="menu-icon" aria-label="Open the Cookbook" onClick={toggleMenu}><span className="menu-text">Cookbook</span> ☰</button>
+        <div className="navbar-title">🍝 <span>Green Spaghetti</span></div>
+        <button className="subscribe-btn" aria-label="Open Chef’s Table" onClick={onOpenLogin}>Chef’s Table</button>
       </header>
 
-      {/* Slide-in Menu */}
       <div className={`menu-overlay ${menuOpen ? "active" : ""}`}>
-        <div className="menu-header">
-          <h2>Menu</h2>
-          <button className="close-btn" onClick={closeMenu}>✕</button>
-        </div>
-
+        <div className="menu-header"><h2>MENU</h2><button className="close-btn" onClick={closeMenu}>✕</button></div>
         <ul className="menu-links">
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/breakfast" onClick={closeMenu}>Breakfast</Link></li>
