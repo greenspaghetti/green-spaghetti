@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/pg-style/home.css"; // reuse same dark style for now
+import "../styles/pg-style/pages.css";
+
 
 
 
@@ -9,6 +10,13 @@ function PageTemplate({ title, children }) {
       <div className="page-content">
         <h1>{title}</h1>
         {children}
+        <div className="page-placeholder">
+  <img
+     src={`https://picsum.photos/800/500?grayscale&random=${title.length * 42}`}
+  alt={`${title} placeholder`}
+  />
+</div>
+
       </div>
     </div>
   );
