@@ -25,15 +25,13 @@
   line-height: 1.6;
 }
 
-/* new addition */
-.page-placeholder {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.page-placeholder img {
+/* === Page Image === */
+.page-image {
   width: 80%;
   max-width: 800px;
+  margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  height: auto;
 }

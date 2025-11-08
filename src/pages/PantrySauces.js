@@ -1,12 +1,12 @@
 import React from "react";
 import PageTemplate from "../components/PageTemplate";
 
-function PantrySauces() {
+function Pantry() {
   return (
-    <PageTemplate title="Pantry & Sauces">
-      <p>Dressings, dips, and kitchen essentials — pantry favorites coming soon!</p>
+    <PageTemplate title="Pantry">
+      <p>Your go-to blends, sauces, and basics — the kitchen essentials.</p>
     </PageTemplate>
   );
 }
 
-export default PantrySauces;
+export default Pantry;

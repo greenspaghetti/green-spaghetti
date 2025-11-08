@@ -1,12 +1,12 @@
 import React from "react";
 import PageTemplate from "../components/PageTemplate";
 
-function DrinksAlcohol() {
+function Drinks() {
   return (
-    <PageTemplate title="Drinks & Alcohol">
-      <p>From shakes to cocktails — sip-worthy recipes on the way!</p>
+    <PageTemplate title="Drinks">
+      <p>Shake, stir, and sip — cocktails and drinks coming soon!</p>
     </PageTemplate>
   );
 }
 
-export default DrinksAlcohol;
+export default Drinks;
