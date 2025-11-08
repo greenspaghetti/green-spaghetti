@@ -61,6 +61,20 @@ AI-generated mockups and concept art coming soon:
 
 *(These will be added once Phase 3 visuals are finalized.)*
 
+## Mockups
+
+### Homepage
+![Homepage](public/mockups/homepage-mockup.jpg)
+
+### Breakfast Page Example
+![Breakfast Page](public/mockups/page-template-example.jpg)
+
+### Recipe Binder Layout
+![Recipe Binder](public/mockups/recipe-binder-mockup.jpg)
+
+### Chef’s Table Login
+![Chef’s Table Login](public/mockups/chefs-table-login.jpg)
+
 
 
 </details>
