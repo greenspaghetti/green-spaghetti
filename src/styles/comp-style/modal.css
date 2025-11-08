@@ -40,11 +40,10 @@
   font-size: 3rem;
   letter-spacing: 6px;
   color: rgba(46, 92, 46, 0.1);
- text-transform: uppercase;
+  text-transform: uppercase;
   font-weight: 700;
   pointer-events: none;
 }
-
 
 .modal-content {
   position: relative;
@@ -212,3 +211,78 @@
 .confetti-piece:nth-child(5n+2) { --hue: 120; left: 40%; animation-delay: 0.2s; }
 .confetti-piece:nth-child(5n+3) { --hue: 200; left: 60%; animation-delay: 0.3s; }
 .confetti-piece:nth-child(5n+4) { --hue: 300; left: 80%; animation-delay: 0.4s; }
+
+/* ===== ABOUT MODAL ADDITIONS ===== */
+
+.modal-box.about-modal {
+  background-color: #f6f3ec;
+  background-size: cover;
+  background-position: center;
+  color: #2e5c2e;
+  width: 80%;
+  max-width: 700px;
+  padding: 40px 50px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 85vh;
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+}
+
+.modal-box.about-modal::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-box.about-modal::-webkit-scrollbar-thumb {
+  background: rgba(46, 92, 46, 0.3);
+  border-radius: 4px;
+}
+
+.author-photo {
+  display: block;
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #2e5c2e;
+}
+
+.signature-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.signature {
+  width: 180px;
+  height: auto;
+  margin-right: 10px;
+  transform: translateY(10px);
+}
+
+@media (max-width: 600px) {
+  .modal-box.about-modal {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .author-photo {
+    width: 80%;
+  }
+
+  .signature {
+    width: 140px;
+  }
+}
