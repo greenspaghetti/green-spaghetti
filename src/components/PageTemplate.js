@@ -1,6 +1,7 @@
 import React from "react";
-import "../styles/pg-style/pages.css";
+import "../styles/pg-style/pages.css"; // unified CSS
 
+// page images
 import breakfast from "../assets/pages/breakfast.jpg";
 import appetizers from "../assets/pages/appetizers.jpg";
 import mains from "../assets/pages/mains.jpg";
@@ -30,8 +31,11 @@ const displayTitles = {
 };
 
 function PageTemplate({ title, children }) {
+  const pageClass =
+    title === "Breakfast" ? "page-wrapper breakfast-page" : "page-wrapper";
+
   return (
-    <div className="page-wrapper">
+    <div className={pageClass}>
       <div className="page-content">
         <h1>{displayTitles[title] || title}</h1>
         {children}
