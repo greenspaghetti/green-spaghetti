@@ -26,7 +26,7 @@ function Footer({ onOpenSubscribe, onOpenAbout }) {
           <div className="footer-links">
             <button onClick={() => {console.log("About button clicked"); onOpenAbout();}}>About</button>
             <a href="mailto:youremail@example.com">Contact</a>
-            <a href="https://artfulbytes.wordpress.com/" target="_blank" rel="noreferrer"> Blog</a>
+            <a href="https://www.artfulbytes.blog/kitchen" target="_blank" rel="noreferrer"> Blog</a>
           </div>
         </div>
       </div>
